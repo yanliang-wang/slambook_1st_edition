@@ -48,7 +48,7 @@ int main ( int argc, char** argv )
 
     // 四元数
     // 可以直接把AngleAxis赋值给四元数，反之亦然
-    Eigen::Quaterniond q = Eigen::Quaterniond ( rotation_vector );
+    Eigen::Quaterniond q = Eigen::Quaterniond ( rotation_vector );//Quaterniond类型不能支出输出<<
     cout<<"quaternion = \n"<<q.coeffs() <<endl;   // 请注意coeffs的顺序是(x,y,z,w),w为实部，前三者为虚部
     // 也可以把旋转矩阵赋给它
     q = Eigen::Quaterniond ( rotation_matrix );
